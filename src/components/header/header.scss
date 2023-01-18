@@ -1,0 +1,10 @@
+.header{
+  display: flex;
+  &-logo{
+    height: 10vmin;
+    pointer-events: none;
+  }
+  &-link{
+    color: #61dafb;
+  }
+}

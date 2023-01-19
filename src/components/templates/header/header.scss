@@ -1,0 +1,45 @@
+@use "../../sass/common/colors" as c;
+@use "../../sass/common/fonts.scss" as f;
+@use "../../sass/common/mixins.scss" as m;
+
+.header{
+  display: flex;
+  padding:20px;
+  @include m.desktop{
+    padding-left: 100px;
+    padding-top: 40px;
+    padding-right:100px;
+  }
+  justify-content: space-between;
+  &-logo{
+    height: 68px;
+    cursor:pointer;
+  }
+  &-nav{
+    height:68px;
+    &-list{
+      display: flex;
+      justify-content: space-between;
+      list-style:none;
+      &-item{
+        a{
+          cursor:pointer;
+          text-transform: uppercase;
+          color:c.$salmon;
+          font-size: f.$f12;
+          margin-left: 10px;
+          @include m.desktop{
+            text-transform : initial;
+            margin-left: 57px;
+            font-size: f.$f24;
+          }
+          line-height: 68px;
+          text-decoration:none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

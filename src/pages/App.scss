@@ -1,3 +1,5 @@
+@use "../components/sass/common/fonts.scss" as f;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,4 +8,7 @@
 
 body {
   margin: 0;
+  font-weight:500;
+  font-family: f.$montserrat;
 }
+

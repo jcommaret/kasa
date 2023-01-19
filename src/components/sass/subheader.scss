@@ -11,24 +11,30 @@ $subheader-big : "../../assets/img/subheader-big.png";
   background-size: cover;
   background-image: url($subheader-small);
   height:111px;
-  border-radius: 25px;
-  font-size: f.$f24;  
-  line-height: f.$f24;
+  border-radius:25px;
+  font-size:f.$f24;  
+  line-height:f.$f24;
   color:c.$white;
   &-text{
     margin-left:16px;
-    padding-top: 30px;
+    padding-top:30px;
+  }
+  br{
+    display: initial;
   }
   @include m.desktop{
     height:223px;
     background-image: url($subheader-big);
-    margin-top: 63px;
+    margin-top:63px;
     text-align: center;
     font-size: f.$f48;
-    line-height: 223px;
+    line-height:223px;
     &-text{
-      padding: initial;
+      padding:initial;
       margin-left:initial;
     } 
+    br{
+      display:none;
+    }
   }
 }

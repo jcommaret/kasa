@@ -9,11 +9,17 @@
     padding-left: 100px;
     padding-top: 40px;
     padding-right:100px;
+    padding-bottom: 0px;
   }
   justify-content: space-between;
   &-logo{
-    height: 68px;
-    cursor:pointer;
+    width:145px;
+    height:45px;
+    @include m.desktop{
+      width: 210px;
+      height: 68px;
+      cursor:pointer;
+    }
   }
   &-nav{
     height:68px;
@@ -28,13 +34,15 @@
           color:c.$salmon;
           font-size: f.$f12;
           margin-left: 10px;
+          line-height: 68px;
+          text-decoration:none;
+          width: 30px;
           @include m.desktop{
             text-transform : initial;
             margin-left: 57px;
             font-size: f.$f24;
+            width: initial;
           }
-          line-height: 68px;
-          text-decoration:none;
           &:hover{
             text-decoration: underline;
           }

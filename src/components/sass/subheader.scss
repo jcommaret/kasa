@@ -11,15 +11,15 @@ $subheader-big : "../../assets/img/subheader-big.png";
   background-size: cover;
   background-image: url($subheader-small);
   height:111px;
-  border-radius: 10px;
+  border-radius: 25px;
   font-size: f.$f24;  
-  line-height: 111px;
+  line-height: f.$f24;
   color:c.$white;
   &-text{
     margin-left:16px;
+    padding-top: 30px;
   }
   @include m.desktop{
-    background-image: url($subheader-big);
     height:223px;
     background-image: url($subheader-big);
     margin-top: 63px;
@@ -27,6 +27,7 @@ $subheader-big : "../../assets/img/subheader-big.png";
     font-size: f.$f48;
     line-height: 223px;
     &-text{
+      padding: initial;
       margin-left:initial;
     } 
   }

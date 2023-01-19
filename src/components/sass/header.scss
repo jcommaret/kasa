@@ -4,7 +4,10 @@
 
 .header{
   display: flex;
-  padding:20px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:20px;
+  padding-bottom: 0px;
   @include m.desktop{
     padding-left: 100px;
     padding-top: 40px;

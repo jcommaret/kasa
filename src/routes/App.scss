@@ -1,4 +1,5 @@
 @use "../components/sass/common/fonts.scss" as f;
+@use "../components/sass/common/mixins.scss" as m;
 
 * {
   box-sizing: border-box;
@@ -12,3 +13,11 @@ body {
   font-family: f.$montserrat;
 }
 
+.container{
+  margin-left: 20px;
+  margin-right:20px;
+  @include m.desktop{
+    margin-left:100px;
+    margin-right:100px;
+  }
+}

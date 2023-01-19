@@ -1,6 +1,6 @@
-@use "../../sass/common/colors" as c;
-@use "../../sass/common/fonts.scss" as f;
-@use "../../sass/common/mixins.scss" as m;
+@use "./common/colors" as c;
+@use "./common/fonts.scss" as f;
+@use "./common/mixins.scss" as m;
 
 .header{
   display: flex;

@@ -1,0 +1,33 @@
+@use "./common/colors" as c;
+@use "./common/fonts.scss" as f;
+@use "./common/mixins.scss" as m;
+
+$subheader-small : "../../assets/img/subheader-small.png";
+$subheader-big : "../../assets/img/subheader-big.png";
+
+.subheader{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url($subheader-small);
+  height:111px;
+  border-radius: 10px;
+  font-size: f.$f24;  
+  line-height: 111px;
+  color:c.$white;
+  &-text{
+    margin-left:16px;
+  }
+  @include m.desktop{
+    background-image: url($subheader-big);
+    height:223px;
+    background-image: url($subheader-big);
+    margin-top: 63px;
+    text-align: center;
+    font-size: f.$f48;
+    line-height: 223px;
+    &-text{
+      margin-left:initial;
+    } 
+  }
+}

@@ -1,4 +1,4 @@
-import '../../sass/subheader.scss';
+import './index.scss';
 
 export default function Subheader() {
   return (

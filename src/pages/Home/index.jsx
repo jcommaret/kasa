@@ -1,5 +1,5 @@
-import Subheader from "./_partials/Subheader";
-import LogementsList from "./_partials/LogementsList";
+import Subheader from "../../components/SubHeader";
+import LogementsList from "../../components/LogementsList";
 
 export default function Home() {
     return (

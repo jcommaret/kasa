@@ -1,5 +1,5 @@
 
-import '../../sass/logements_list.scss';
+import './index.scss';
 
 export default function LogementsList() {
     return (

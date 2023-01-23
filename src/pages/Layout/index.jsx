@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom"
 
-import '../sass/pages/Layout.scss';
+import './index.scss';
 
-import Navigation from "./_partials/Navigation"
-import Footer from "./_partials/Footer"
+import Navigation from "../../components/Header"
+import Footer from "../../components/Footer"
 
 export default function Layout() {
   return (

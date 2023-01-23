@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from '../../../assets/img/logo.png';
-import '../../sass/header.scss';
+import logo from '../../assets/img/logo.png';
+import './index.scss';
 
 export default function Navigation() {
     return (

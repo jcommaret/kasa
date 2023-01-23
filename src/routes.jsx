@@ -1,12 +1,10 @@
-import { Routes, Route } from "react-router-dom";
-// common
+import { Routes, Route } from "react-router-dom"
 
-// Pages 
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import ErrorPage from "./pages/404";
-import About from "./pages/About";
-import LogementDetails from "./pages/LogementDetails";
+import Layout from "./pages/Layout"
+import Home from "./pages/Home"
+import ErrorPage from "./pages/404"
+import About from "./pages/About"
+import LogementDetails from "./pages/LogementDetails"
 
 export default function App() {
   return (
@@ -15,11 +13,11 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="kasa" element={<Home />} />
-          <Route path="about" element={<About />} />    
-          <Route path="logement" element={<LogementDetails />} />  
+          <Route path="about" element={<About />} />
+          <Route path="logement" element={<LogementDetails />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </>
-  );
+  )
 }

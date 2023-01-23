@@ -1,6 +1,23 @@
 
+@use "../../styles/colors.scss" as c;
+@use "../../styles/mixins.scss" as m;
+@use "../../styles/fonts.scss" as f;
+
 .footer{
-  background: #000000;
-  height:209px;
+  background: c.$black;
   width: 100%;
+  text-align: center;
+  color: c.$white;
+  height:209px;
+  img{
+    margin-top: 66px;
+  }
+  p{
+    font-size: f.$f12;
+    @include m.desktop{
+      font-size: f.$f24;
+    }
+    margin-top:10px;
+    margin-bottom: 62px;
+  }
 }

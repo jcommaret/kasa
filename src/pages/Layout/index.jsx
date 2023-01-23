@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 
-import './index.scss';
+import "./index.scss"
 
 import Navigation from "../../components/Header"
 import Footer from "../../components/Footer"

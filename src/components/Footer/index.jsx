@@ -1,12 +1,12 @@
 import "./index.scss"
-
-import logoFooter from "../../assets/img/logo_footer.png"
+import Logo from "../Logo"
 
 export default function Footer() {
+  const footerText = "© 2020 Kasa. All rights reserved"
   return (
     <footer className="footer">
-      <img src={logoFooter} alt="Logo Kasa" className="footer__logo" />
-      <p>© 2020 Kasa. All rights reserved</p>
+      <Logo isHeader={false} />
+      <p>{footerText}</p>
     </footer>
   )
 }

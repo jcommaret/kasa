@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom"
 
-import Layout from "./pages/Layout"
-import Home from "./pages/Home"
-import ErrorPage from "./pages/404"
-import About from "./pages/About"
-import LogementDetails from "./pages/LogementDetails"
+import Layout from "../pages/Layout"
+import Home from "../pages/Home"
+import ErrorPage from "../pages/404"
+import About from "../pages/About"
+import LogementDetails from "../pages/LogementDetails"
 
 export default function App() {
   return (

@@ -3,6 +3,7 @@ import logo from "../../assets/img/logo.png"
 import "./index.scss"
 
 export default function Navigation() {
+  const navItems = ["Accueil", "A Propos"]
   return (
     <header className="header">
       <Link to="/" className="logo">
@@ -10,16 +11,13 @@ export default function Navigation() {
       </Link>
       <nav className="header-nav">
         <ul className="header-nav-list">
-          <li className="header-nav-list-item">
-            <Link to="/" className="header-nav-list-item-link">
-              Accueil
-            </Link>
-          </li>
-          <li className="header-nav-list-item">
-            <Link to="/about" className="header-nav-list-item-link">
-              A Propos
-            </Link>
-          </li>
+          {navItems.map((navText) => (
+            <li className="header-nav-list-item">
+              <Link to="/" className="header-nav-list-item-link">
+                {navText}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

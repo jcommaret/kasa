@@ -4,7 +4,7 @@ import LogementsList from "../../components/LogementsList"
 export default function Home() {
   return (
     <>
-      <Subheader />
+      <Subheader isSlider={false} />
       <LogementsList />
     </>
   )

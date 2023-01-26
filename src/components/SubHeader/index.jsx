@@ -2,6 +2,7 @@ import "./index.scss"
 
 export default function Subheader(props) {
   const isSlider = props.isSlider
+
   const subheaderTextPart1 = "Chez vous,"
   const subheaderTextPart2 = "partout et ailleurs"
 

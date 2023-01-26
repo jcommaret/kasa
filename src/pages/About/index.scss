@@ -1,0 +1,7 @@
+@use "../../styles/mixins.scss" as m;
+
+.About{
+  @include m.desktop{
+    padding:30px;
+  }
+}

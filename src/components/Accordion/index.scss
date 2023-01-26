@@ -1,0 +1,36 @@
+@use "../../styles/colors.scss" as c;
+@use "../../styles/fonts.scss" as f;
+
+.accordion{
+  margin-bottom: 30px;
+  &-title{
+    display: flex;
+    height: 47px;
+    background-color: c.$salmon;
+    border-radius: 5px;
+    color:c.$white;
+    padding-left:18px;
+    padding-right: 18px;  
+    line-height: 47px;
+    justify-content: space-between;
+    h2{
+      font-size: f.$f24;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &-content{
+    font-weight: 400;
+    font-size: f.$f24;
+    color:c.$salmon;
+    background: #F7F7F7;
+    border-radius: 5px; 
+    padding-top: 30px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    line-height:34px;
+  }
+}

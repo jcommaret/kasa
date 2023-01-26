@@ -1,29 +1,21 @@
 import "./index.scss"
+import logements from "../../data/logements.json"
 
 export default function LogementsList() {
+  const logementsList = logements
   return (
     <>
       <div className="logementsList">
-        <div className="logementsList-item">
-          <img className="image" src="" alt="plop" />
-        </div>
-
-        <div className="logementsList-item">
-          <img className="test" src="" alt="plop" />
-        </div>
-
-        <div className="logementsList-item">
-          <img className="test" src="" alt="plop" />
-        </div>
-
-        <div className="logementsList-item">
-          <img className="test" src="" alt="plop" />
-          <h2>Titre de la location</h2>
-        </div>
-
-        <div className="logementsList-item">
-          <img className="test" src="" alt="plop" />
-        </div>
+        {logementsList.map((logement, id) => (
+          <div key={id} className="logementsList-item">
+            <a href={`logement/${id}`}>
+              <div className="logementsList-item_details">
+                <img className="image" src={logement.cover} alt="plop" />
+                <h2>{logement.title}</h2>
+              </div>
+            </a>
+          </div>
+        ))}
       </div>
     </>
   )

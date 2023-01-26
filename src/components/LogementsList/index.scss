@@ -7,7 +7,6 @@
   margin-bottom:43px;
   border-radius: 25px;
   width: 100%;
-  
   @include m.desktop{
     padding-top:56px;
     padding-left: 50px;
@@ -20,30 +19,31 @@
   }
   &-item{
     margin-bottom: 20px;
+    background:c.$salmon;
+    border-radius: 10px;
     @include m.desktop{
       margin-bottom: initial;
       width:calc(100% / 3 - 40px);
+      height:340px;
     }
-    background:c.$salmon;
-    border-radius: 10px;
+    &_details{
+      position: relative;
+      height:340px;
+    }
     img{
-      width:100%;
-      min-height:340px;
+      height:340px;
+      width:calc(100%);
+      background-size: cover;
+      object-fit: cover;     
       z-index:-1;
       border-radius: 10px;
     }
     h2{
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
       font-size: f.$f18;
       color: c.$white;
-      width:100px;
-      position: absolute;
-      margin-top:-55px;
-      margin-left: 15px;
-      &::before{
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-        border-radius: 10px;
-        
-      }
     }
   }
 }

@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom"
 import Logo from "../Logo"
+import navItems from "./data.js"
 import "./index.scss"
 
 export default function Navigation() {
-  const navItems = [
-    { text: "Accueil", link: "/" },
-    { text: "A Propos", link: "/about" },
-  ]
   return (
     <header className="header">
       <Link to="/" className="logo">

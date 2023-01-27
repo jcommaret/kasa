@@ -1,0 +1,14 @@
+.LogementDetails{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  &-Commodities{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    gap:30px;
+    .accordion{
+      width: 100%;
+    }
+  }
+}

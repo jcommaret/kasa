@@ -1,5 +1,6 @@
 @use "../../styles/colors.scss" as c;
 @use "../../styles/fonts.scss" as f;
+@use "../../styles/mixins.scss" as m;
 
 .accordion{
   margin-bottom: 30px;
@@ -33,4 +34,17 @@
     margin-bottom: 20px;
     line-height:34px;
   }
+}
+
+.open{
+  @include m.sliderbutton{
+    transform: rotate(135deg);
+    margin-top:10px;
+  }		
+}
+.close{
+  @include m.sliderbutton{
+    transform: rotate(315deg);
+    margin-top:20px;
+  }		
 }

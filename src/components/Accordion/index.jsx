@@ -9,9 +9,9 @@ const Accordion = ({ title, content }) => {
       <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
         <h2>{title}</h2>
         {isActive ? (
-          <div className="close">Close</div>
+          <div className="close"></div>
         ) : (
-          <div className="open">Open</div>
+          <div className="open"></div>
         )}
       </div>
       {isActive && <div className="accordion-content">{content}</div>}

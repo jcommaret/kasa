@@ -3,6 +3,7 @@ import "./index.scss"
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false)
+
   return (
     <div className="accordion">
       <div className="accordion-title" onClick={() => setIsActive(!isActive)}>

@@ -16,9 +16,10 @@ export default function LogementDetails() {
   const rating = logement.rating
   const description = logement.description
 
+  // LOVE THIS ONE (PLEASE STOP CRYING) 😅
   const eqts = logement.equipments
-  // LOVE THIS ONE (STOP CRYING) 😅
   const equipements = eqts.map((eqt, index) => <li key={index}>{eqt}</li>)
+
   const accordionContent = [
     { title: "Description", content: description },
     { title: "Equipements", content: equipements },

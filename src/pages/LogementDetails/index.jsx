@@ -8,6 +8,7 @@ export default function LogementDetails() {
   const id = useParams().id
   const logementsList = logements
   const logement = logementsList[id]
+
   const title = logement.title
   const location = logement.location
   const tags = logement.tags

@@ -10,7 +10,12 @@ export default function LogementsList() {
           <div key={id} className="logementsList-item">
             <a href={`logement/${id}`}>
               <div className="logementsList-item_details">
-                <img className="image" src={logement.cover} alt="plop" />
+                <img
+                  className="image"
+                  loading="lazy"
+                  src={logement.cover}
+                  alt="plop"
+                />
                 <h2>{logement.title}</h2>
               </div>
             </a>

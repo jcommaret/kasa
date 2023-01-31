@@ -28,6 +28,7 @@ export default function LogementDetails() {
   return (
     <div className="Logement">
       <Subheader />
+
       <div className="LogementDetails">
         <div className="top">
           <div className="LogementDetails-place">

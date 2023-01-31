@@ -3,6 +3,8 @@ import Logo from "../Logo"
 import navItems from "./data.js"
 import "./index.scss"
 
+
+
 export default function Navigation() {
   return (
     <header className="header">

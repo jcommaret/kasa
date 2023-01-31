@@ -1,7 +1,7 @@
 import "./index.scss"
 import { useParams } from "react-router-dom"
 import logements from "../../data/logements.json"
-import Subheader from "../../components/SubHeader"
+import Subheader from "../../components/ImageHeader"
 import Accordion from "../../components/Accordion"
 
 export default function LogementDetails() {
@@ -17,7 +17,6 @@ export default function LogementDetails() {
   const rating = logement.rating
   const description = logement.description
 
-  // LOVE THIS ONE (PLEASE STOP CRYING) 😅
   const eqts = logement.equipments
   const equipements = eqts.map((eqt, index) => <li key={index}>{eqt}</li>)
 
@@ -28,7 +27,7 @@ export default function LogementDetails() {
 
   return (
     <div className="Logement">
-      <Subheader isSlider={true} />
+      <Subheader />
       <div className="LogementDetails">
         <div className="top">
           <div className="LogementDetails-place">

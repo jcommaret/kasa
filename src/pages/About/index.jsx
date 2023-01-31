@@ -1,7 +1,7 @@
 import "./index.scss"
 import aboutItems from "./data.js"
 import Accordion from "../../components/Accordion"
-import Subheader from "../../components/SubHeader"
+import Subheader from "../../components/ImageHeader"
 
 export default function About() {
   return (

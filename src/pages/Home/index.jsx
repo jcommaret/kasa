@@ -1,7 +1,7 @@
 // Components for the Home page
 import ImageHeader from "../../components/ImageHeader"
 import LogementsList from "../../components/LogementsList"
-import backgroundImage from "../../assets/img/header/home.png"
+import backgroundImage from "../../assets/img/home/header-big.png"
 
 // Data
 const background = backgroundImage

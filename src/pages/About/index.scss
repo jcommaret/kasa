@@ -1,7 +1,20 @@
 @use "../../styles/mixins.scss" as m;
 
 .About{
-  @include m.desktop{
-    padding:30px;
+  .imageHeader{
+    height: 223px;
+    @include m.desktop{
+      height:223px;
+    }
+    &-image{
+      height:223px;
+    }
+  }
+  .Accordion-list{
+    margin-top:30px;
+    @include m.desktop{
+      margin-left:70px;
+      margin-right:70px;
+    }
   }
 }

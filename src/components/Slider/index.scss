@@ -1,0 +1,37 @@
+@use "../../styles/colors.scss" as c;
+@use "../../styles/fonts.scss" as f;
+@use "../../styles/mixins.scss" as m;
+
+.slideHeader{
+  position: relative;
+  height: 111px;
+  @include m.desktop{
+    height:415px;
+  }
+  margin-top:40px;
+  &-image{
+    border-radius: 25px;
+    height: 111px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    @include m.desktop{
+      height:415px;
+    }
+  }
+  &-text{
+    color: c.$white;
+    position: absolute;
+    font-size:f.$f24;
+    margin-left:16px;
+    bottom:40px;
+    width: 100%;
+    @include m.desktop{
+      font-size:f.$f48;
+      margin:auto;
+      bottom:80px;
+      text-align: center;
+      
+    }
+  }
+}

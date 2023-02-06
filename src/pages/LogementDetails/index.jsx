@@ -1,12 +1,8 @@
 import "./index.scss"
 import { useParams } from "react-router-dom"
 import logements from "../../data/logements.json"
-import ImageHeader from "../../components/ImageHeader"
+import SliderHeader from "../../components/Slider"
 import Accordion from "../../components/Accordion"
-import backgroundImage from "../../assets/img/home/header-big.png"
-
-const background = backgroundImage
-const imageAlt = "Logement de vacances"
 
 export default function LogementDetails() {
   const id = useParams().id
@@ -16,9 +12,10 @@ export default function LogementDetails() {
   const location = logement.location
   const tags = logement.tags
   const hostname = logement.host.name
+  const description = logement.description
+
   const hostpicture = logement.host.picture
   const rating = logement.rating
-  const description = logement.description
 
   const eqts = logement.equipments
   const equipements = eqts.map((eqt, index) => <li key={index}>{eqt}</li>)
@@ -28,12 +25,14 @@ export default function LogementDetails() {
     { title: "Equipements", content: equipements },
   ]
 
+  const background = "https://place-hold.it/415x1200"
+
   return (
     <div className="Logement">
-      <ImageHeader background={background} imageAlt={imageAlt} />
-      <div className="LogementDetails">
+      <SliderHeader background={background} />
+      <div className="Logement-Details">
         <div className="top">
-          <div className="LogementDetails-place">
+          <div className="Logement-Details__place">
             <h2>{title}</h2>
             <p>{location}</p>
             <ul>
@@ -43,19 +42,19 @@ export default function LogementDetails() {
             </ul>
           </div>
 
-          <div className="LogementDetails-host">
-            <div className="LogementDetails-identity">
+          <div className="Logement-Details__host">
+            <div className="Logement-Details__identity">
               <p>{hostname}</p>
               <img src={hostpicture} alt="Hote" />
             </div>
 
-            <div className="LogementDetails-ratingBox">
+            <div className="Logement-Details__ratingBox">
               <p>{rating}</p>
             </div>
           </div>
         </div>
         <div className="bottom">
-          <div className="LogementDetails-Commodities">
+          <div className="Logement-Details__commodities">
             {accordionContent.map(({ title, content, index }) => (
               <Accordion key={index} title={title} content={content} />
             ))}

@@ -2,76 +2,87 @@
 @use "../../styles/fonts.scss" as f;
 @use "../../styles/mixins.scss" as m;
 
-.LogementDetails{
-  display: flex;
-  flex-direction: column;
-  gap:30px;
-  .top{
-    margin-top:30px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.Logement{
+  .imageHeader{
+    height:415px;
   }
-  &-identity{
+  &-Details{
     display: flex;
-    justify-content: space-between;
-    width:196px;
-  }
-  &-host{
-    width:196px;
-    text-align: right;
-    justify-content: right;
-    p{
-      padding:16px;
-      width:130px;
-      font-size: f.$f18;
-      color: c.$salmon;
+    flex-direction: column;
+    gap:30px;
+    .top{
+      margin-top:30px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    &__place{
+      h2, p{
+        color :c.$salmon;
+      }
+      h2{
+        font-size:36px;
+      }
+      p{
+        font-size: f.$f18;
+      }
+      ul{
+        display:flex;
+        margin-top: 20px;
+        gap:5px;
+        li{
+          font-size: f.$f14;
+          background-color: c.$salmon;
+          color: c.$white;
+          padding-top: 3px;
+          text-align: center;
+          padding-bottom: 3px;
+          width: 115px;
+          line-height: 25px;
+          border-radius: 10px;
+        }
+      }
+    }
+    &__identity{
+      display: flex;
+      justify-content: space-between;
+      width:196px;
+    }
+    &__host{
+      width:196px;
       text-align: right;
-      line-height: 16px;
+      justify-content: right;
+      p{
+        padding:16px;
+        width:130px;
+        font-size: f.$f18;
+        color: c.$salmon;
+        text-align: right;
+        line-height: 16px;
+      }
+      img{
+        width:64px;
+        height:64px;
+        border-radius: 32px;
+        background-color: c.$grey;
+      }
     }
-    img{
-      width:64px;
-      height:64px;
-      border-radius: 32px;
-    }
-  }
-  &-place{
-    h2, p{
-      color :c.$salmon;
-    }
-    h2{
-      font-size:36px;
-    }
-    p{
-      font-size: f.$f18;
-    }
-    ul{
+    &__commodities{
+      width: 100%;
       display:flex;
-      margin-top: 20px;
-      gap:5px;
-      li{
-        font-size: f.$f14;
-        background-color: c.$salmon;
-        color: c.$white;
-        padding-top: 3px;
-        text-align: center;
-        padding-bottom: 3px;
-        width: 115px;
-        line-height: 25px;
-        border-radius: 10px;
+      flex-direction: row;
+      gap:30px;
+      .accordion{
+        width: 100%;
+        h2{
+          font-size: f.$f18;
+        }
+        &-content{
+          font-size: f.$f18;
+          line-height: 25.67px;
+        }
       }
     }
   }
-
-
-
-  &-Commodities{
-    width: 100%;
-    display:flex;
-    flex-direction: row;
-    gap:30px;
-    .accordion{
-      width: 100%;
-    }
-  }
 }
+

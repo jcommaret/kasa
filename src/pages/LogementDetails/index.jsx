@@ -25,11 +25,14 @@ export default function LogementDetails() {
     { title: "Equipements", content: equipements },
   ]
 
-  const background = "https://place-hold.it/415x1200"
+  const SliderPictures = logement.pictures
+  const Arrayofpictures = SliderPictures
+  const background = Arrayofpictures[0]
 
   return (
     <div className="Logement">
       <SliderHeader background={background} />
+
       <div className="Logement-Details">
         <div className="top">
           <div className="Logement-Details__place">

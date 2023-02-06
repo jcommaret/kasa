@@ -35,7 +35,6 @@
     line-height:34px;
   }
 }
-
 .open{
   @include m.sliderbutton{
     transform: rotate(135deg);

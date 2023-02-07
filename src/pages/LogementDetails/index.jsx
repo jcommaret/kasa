@@ -17,8 +17,18 @@ export default function LogementDetails() {
   const hostpicture = logement.host.picture
   const rating = logement.rating
 
-  const eqts = logement.equipments
-  const equipements = eqts.map((eqt, index) => <li key={index}>{eqt}</li>)
+  const equipementArray = logement.equipments
+
+  const equipementsList = () => {
+    return (
+      <ul>
+        {equipementArray.map((eqt, index) => (
+          <li key={index}>{eqt}</li>
+        ))}
+      </ul>
+    )
+  }
+  const equipements = equipementsList()
 
   const accordionContent = [
     { title: "Description", content: description },

@@ -34,4 +34,20 @@
       
     }
   }
+  &-prev{
+    @include m.sliderbutton{
+      position: absolute;
+      margin-top: 200px;
+      left:30px;
+			transform: rotate(-135deg);
+    }
+  }
+  &-next{
+    @include m.sliderbutton{
+      position: absolute;
+      margin-top: -220px;
+      right:30px;
+      transform: rotate(45deg);
+    }
+  }
 }

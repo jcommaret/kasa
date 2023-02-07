@@ -34,10 +34,9 @@
           font-size: f.$f14;
           background-color: c.$salmon;
           color: c.$white;
-          padding-top: 3px;
           text-align: center;
-          padding-bottom: 3px;
-          width: 115px;
+          padding: 3px;
+          min-width: 115px;
           line-height: 25px;
           border-radius: 10px;
         }

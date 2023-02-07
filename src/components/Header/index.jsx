@@ -3,7 +3,7 @@ import Logo from "../Logo"
 import navItems from "./data.js"
 import "./index.scss"
 
-export default function Navigation() {
+export default function Header() {
   return (
     <header className="header">
       <Link to="/" className="logo">

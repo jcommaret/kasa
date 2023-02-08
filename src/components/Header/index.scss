@@ -31,6 +31,9 @@
       justify-content: space-between;
       list-style:none;
       &-item{
+        .active{
+          text-decoration: underline;
+        }
         a{
           cursor:pointer;
           text-transform: uppercase;

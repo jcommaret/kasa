@@ -3,9 +3,13 @@
 @use "../../styles/mixins.scss" as m;
 
 .Logement{
-  .imageHeader{
-    height:415px;
+  .slideHeader{
+    height:223px;
+    @include m.desktop{
+      height:415px;
+    }
   }
+  
   &-Details{
     display: flex;
     flex-direction: column;

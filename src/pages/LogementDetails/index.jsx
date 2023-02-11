@@ -1,7 +1,7 @@
 import "./index.scss"
 import { useParams } from "react-router-dom"
 import logements from "../../data/logements.json"
-import SliderHeader from "../../components/Slider"
+import SliderHeader from "../../components/SliderHeader"
 import Accordion from "../../components/Accordion"
 import StarRating from "../../components/StarRating"
 

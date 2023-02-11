@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom"
 import logements from "../../data/logements.json"
 import SliderHeader from "../../components/Slider"
 import Accordion from "../../components/Accordion"
+import StarRating from "../../components/StarRating"
 
 export default function LogementDetails() {
   const id = useParams().id
   const logementsList = logements
   const logement = logementsList[id]
+
   const title = logement.title
   const location = logement.location
   const tags = logement.tags
@@ -38,7 +40,8 @@ export default function LogementDetails() {
   const SliderPictures = logement.pictures
   const Arrayofpictures = SliderPictures
   const background = Arrayofpictures[0]
-
+  const numbersOfStars = 5
+  const count = numbersOfStars
   return (
     <div className="Logement">
       <SliderHeader background={background} />
@@ -62,7 +65,7 @@ export default function LogementDetails() {
             </div>
 
             <div className="Logement-Details__ratingBox">
-              <p>{rating}</p>
+              <StarRating count={count} rating={rating} />
             </div>
           </div>
         </div>

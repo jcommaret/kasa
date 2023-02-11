@@ -14,7 +14,7 @@ export default function LogementsList() {
                   className="image"
                   loading="lazy"
                   src={logement.cover}
-                  alt="plop"
+                  alt="Visuel de l'appartement"
                 />
                 <h2>{logement.title}</h2>
               </div>

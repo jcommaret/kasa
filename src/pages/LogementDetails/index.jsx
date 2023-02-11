@@ -9,18 +9,14 @@ export default function LogementDetails() {
   const id = useParams().id
   const logementsList = logements
   const logement = logementsList[id]
-
   const title = logement.title
   const location = logement.location
   const tags = logement.tags
   const hostname = logement.host.name
   const description = logement.description
-
   const hostpicture = logement.host.picture
   const rating = logement.rating
-
   const equipementArray = logement.equipments
-
   const equipementsList = () => {
     return (
       <ul>
@@ -31,17 +27,17 @@ export default function LogementDetails() {
     )
   }
   const equipements = equipementsList()
-
   const accordionContent = [
     { title: "Description", content: description },
     { title: "Equipements", content: equipements },
   ]
-
   const SliderPictures = logement.pictures
   const Arrayofpictures = SliderPictures
   const background = Arrayofpictures[0]
+
   const numbersOfStars = 5
   const count = numbersOfStars
+  
   return (
     <div className="Logement">
       <SliderHeader background={background} />

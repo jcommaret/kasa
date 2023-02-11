@@ -11,11 +11,11 @@ const imageAlt = "Image de fond du header representant des vacances"
 export default function About() {
   return (
     <>
-      <div class="About">
+      <div className="About">
         <ImageHeader background={background} imageAlt={imageAlt} />
         <div className="Accordion-list">
-          {aboutItems.map(({ title, content }) => (
-            <Accordion title={title} content={content} />
+          {aboutItems.map(({ title, content, index }) => (
+            <Accordion key={index} title={title} content={content} />
           ))}
         </div>
       </div>

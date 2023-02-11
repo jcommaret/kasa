@@ -7,7 +7,7 @@ export default function StarRating({ count, rating }) {
       {stars.map((star, index) => {
         return (
           <div
-            key={index}
+            key={index + star}
             className={index < rating ? "star-active" : "star-inactive"}
           ></div>
         )

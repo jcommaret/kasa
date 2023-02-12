@@ -32,15 +32,13 @@ export default function LogementDetails() {
     { title: "Equipements", content: equipements },
   ]
   const SliderPictures = logement.pictures
-  const Arrayofpictures = SliderPictures
-  const background = Arrayofpictures[0]
 
   const numbersOfStars = 5
   const count = numbersOfStars
-  
+
   return (
     <div className="Logement">
-      <SliderHeader background={background} />
+      <SliderHeader background={SliderPictures} />
 
       <div className="Logement-Details">
         <div className="top">

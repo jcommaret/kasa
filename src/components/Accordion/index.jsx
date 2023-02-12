@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./index.scss"
 
-const Accordion = ({ title, content }) => {
+export default function Accordion({ title, content }) {
   const [isActive, setIsActive] = useState(false)
 
   return (
@@ -18,5 +18,3 @@ const Accordion = ({ title, content }) => {
     </div>
   )
 }
-
-export default Accordion

@@ -1,14 +1,25 @@
 import "./index.scss"
+import { useState } from "react"
 
-const slideHeader = ({ text, background, imageAlt }) => {
+export default function SliderHeader({ text, background, imageAlt }) {
+  let [currentSlide] = useState(0)
+
   return (
     <div className="slideHeader">
-      <div className="slideHeader-prev"></div>
-      <img className="slideHeader-image" src={background} alt={imageAlt} />
+      <div
+        //        onClick={ChangeSlide(background[currentSlide]-1)}
+        className="slideHeader-prev"
+      ></div>
+      <img
+        className="slideHeader-image"
+        src={background[currentSlide]}
+        alt={imageAlt}
+      />
       {text && <p className="slideHeader-text">{text}</p>}
-      <div className="slideHeader-next"></div>
+      <div
+        //      onClick={ChangeSlide(background[currentSlide]+1)}
+        className="slideHeader-next"
+      ></div>
     </div>
   )
 }
-
-export default slideHeader

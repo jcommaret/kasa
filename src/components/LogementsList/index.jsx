@@ -5,8 +5,8 @@ export default function LogementsList() {
   const logementsList = logements
   return (
     <div className="logementsList">
-      {logementsList.map((logement, id) => (
-        <div key={id} className="logementsList-item">
+      {logementsList.map((logement, id, index) => (
+        <div key={index} className="logementsList-item">
           <a href={`logement/${id}`}>
             <div className="logementsList-item_details">
               <img

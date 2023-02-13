@@ -27,18 +27,18 @@ export default function LogementDetails() {
     )
   }
   const equipements = equipementsList()
+  const numbersOfStars = 5
+
   const accordionContent = [
     { title: "Description", content: description },
     { title: "Equipements", content: equipements },
   ]
-  const SliderPictures = logement.pictures
 
-  const numbersOfStars = 5
-  const count = numbersOfStars
+  const slides = logement.pictures
 
   return (
     <div className="Logement">
-      <SliderHeader background={SliderPictures} />
+      <SliderHeader slides={slides} />
 
       <div className="Logement-Details">
         <div className="top">
@@ -47,7 +47,7 @@ export default function LogementDetails() {
             <p>{location}</p>
             <ul>
               {tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
+                <li key={index + tag}>{tag}</li>
               ))}
             </ul>
           </div>
@@ -59,14 +59,18 @@ export default function LogementDetails() {
             </div>
 
             <div className="Logement-Details__ratingBox">
-              <StarRating count={count} rating={rating} />
+              <StarRating count={numbersOfStars} rating={rating} />
             </div>
           </div>
         </div>
         <div className="bottom">
           <div className="Logement-Details__commodities">
             {accordionContent.map(({ title, content, index }) => (
-              <Accordion key={index} title={title} content={content} />
+              <Accordion
+                key={index + title + content}
+                title={title}
+                content={content}
+              />
             ))}
           </div>
         </div>

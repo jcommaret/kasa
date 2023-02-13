@@ -2,7 +2,7 @@
 @use "../../styles/fonts.scss" as f;
 @use "../../styles/mixins.scss" as m;
 
-.slideHeader{
+.sliderHeader{
   position: relative;
   height: 223px;
   @include m.desktop{
@@ -23,15 +23,14 @@
     color: c.$white;
     position: absolute;
     font-size:f.$f24;
-    margin-left:16px;
-    bottom:40px;
+    text-align: center;
+    bottom:5px;
     width: 100%;
     @include m.desktop{
-      font-size:f.$f48;
+      font-size:f.$f24;
       margin:auto;
-      bottom:80px;
+      bottom:10px;
       text-align: center;
-      
     }
   }
   &-prev{

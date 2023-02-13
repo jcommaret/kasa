@@ -1,12 +1,24 @@
+@use "../../styles/mixins.scss" as m;
+
 .star{
   &-inactive{
-    width: 36px;
-    height:36px;
+    width: 18px;
+    height:18px;
+    @include m.desktop{
+      width: 36px;
+      height:36px;
+    }
     background-image: url("../../assets/img/starRating/off.png");
+    background-size: cover;
   }
   &-active{
-    width: 36px;
-    height:36px;
+    width: 18px;
+    height:18px;
+    @include m.desktop{
+      width: 36px;
+      height:36px;
+    }
+    background-size: cover;
     background-image: url("../../assets/img/starRating/on.png");
   };
 }

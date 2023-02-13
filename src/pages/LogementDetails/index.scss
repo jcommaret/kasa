@@ -74,14 +74,21 @@
       p{
         padding:16px;
         width:130px;
-        font-size: f.$f18;
+        font-size: 12px;
+        @include m.desktop{
+          font-size: f.$f18;
+        }
         color: c.$salmon;
         text-align: right;
         line-height: 16px;
       }
       img{
-        width:64px;
-        height:64px;
+        width: 32px;
+        height:32px;
+        @include m.desktop{
+          width:64px;
+          height:64px;
+        }
         border-radius: 32px;
         background-color: c.$grey;
       }

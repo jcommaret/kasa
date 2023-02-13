@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     gap:30px;
+    margin-bottom: 30px;
     .top{
       margin-top:30px;
       display: flex;
@@ -35,7 +36,10 @@
         margin-top: 20px;
         gap:5px;
         li{
-          font-size: f.$f14;
+          font-size: f.$f10;
+          @include m.desktop{
+            font-size: f.$f14;
+          }
           background-color: c.$salmon;
           color: c.$white;
           text-align: center;
@@ -73,16 +77,27 @@
     &__commodities{
       width: 100%;
       display:flex;
-      flex-direction: row;
+      flex-direction: column;
       gap:30px;
+      @include m.desktop{
+        flex-direction: row;
+        gap:30px;
+      }
       .accordion{
         width: 100%;
         h2{
-          font-size: f.$f18;
+          font-size: f.$f13;
+          @include m.desktop{
+            font-size: f.$f18;
+          }
         }
         &-content{
-          font-size: f.$f18;
-          line-height: 25.67px;
+          font-size: f.$f12;
+          line-height: 17.11px;
+          @include m.desktop{
+            font-size: f.$f18;
+            line-height: 25.67px;
+          }
         }
       }
     }

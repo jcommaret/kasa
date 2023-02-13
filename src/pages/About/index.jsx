@@ -14,7 +14,7 @@ export default function About() {
       <div className="About">
         <ImageHeader background={background} imageAlt={imageAlt} />
         <div className="Accordion-list">
-          {aboutItems.map(({ title, content, index }) => (
+          {aboutItems.map(({ title, content }, index) => (
             <Accordion key={index} title={title} content={content} />
           ))}
         </div>

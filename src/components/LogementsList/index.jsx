@@ -5,9 +5,9 @@ export default function LogementsList() {
   const logementsList = logements
   return (
     <div className="logementsList">
-      {logementsList.map((logement, id, index) => (
+      {logementsList.map((logement, index) => (
         <div key={index} className="logementsList-item">
-          <a href={`logement/${id}`}>
+          <a href={`logement/${index}`}>
             <div className="logementsList-item_details">
               <img
                 className="image"

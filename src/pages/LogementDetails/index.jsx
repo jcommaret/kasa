@@ -55,7 +55,7 @@ export default function LogementDetails() {
         </div>
         <div className="bottom">
           <div className="Logement-Details__commodities">
-            {accordionContent.map(({ index, title, content }) => (
+            {accordionContent.map(({ title, content }, index) => (
               <Accordion key={index} title={title} content={content} />
             ))}
           </div>

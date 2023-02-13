@@ -5,7 +5,7 @@ export default function Place({ location, tags, title }) {
       <p>{location}</p>
       <ul>
         {tags.map((tag, id) => (
-          <li key={id + tag}>{tag}</li>
+          <li key={id}>{tag}</li>
         ))}
       </ul>
     </>

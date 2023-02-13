@@ -41,6 +41,7 @@
         display:flex;
         margin-top: 20px;
         gap:5px;
+        flex-wrap: wrap;
         li{
           font-size: f.$f10;
           @include m.desktop{
@@ -66,13 +67,19 @@
       
     }
     &__host{
+      margin-top: 10px;
       @include m.desktop{
         width:196px;
       }
       text-align: right;
       justify-content: right;
       p{
-        padding:16px;
+        padding-top:0px;
+        padding-left:55px;
+        padding-right: 16px;
+        @include m.desktop{
+          padding:16px;
+        }
         width:130px;
         font-size: 12px;
         @include m.desktop{
@@ -123,7 +130,7 @@
     &__ratingBox{
       display: flex;
       flex-direction: row;
-      margin-top: -45px;
+      margin-top: -25px;
       @include m.desktop{
         justify-content:right;
         margin-top:15px;

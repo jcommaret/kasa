@@ -4,6 +4,8 @@ import logements from "../../data/logements.json"
 import SliderHeader from "../../components/SliderHeader"
 import Accordion from "../../components/Accordion"
 import StarRating from "../../components/StarRating"
+import Identity from "../../components/Identity"
+import Place from "../../components/Place"
 
 export default function LogementDetails() {
   const id = useParams().id
@@ -13,9 +15,9 @@ export default function LogementDetails() {
   const location = logement.location
   const tags = logement.tags
   const hostname = logement.host.name
-  const description = logement.description
   const hostpicture = logement.host.picture
   const rating = logement.rating
+  const description = logement.description
   const equipementArray = logement.equipments
   const equipementsList = () => {
     return (
@@ -27,15 +29,13 @@ export default function LogementDetails() {
     )
   }
   const equipements = equipementsList()
-  const numbersOfStars = 5
   const imageAlt = "Visuels du logement"
-
   const accordionContent = [
     { title: "Description", content: description },
     { title: "Equipements", content: equipements },
   ]
-
   const slides = logement.pictures
+  const numbersOfStars = 5
 
   return (
     <div className="Logement">
@@ -44,34 +44,17 @@ export default function LogementDetails() {
       <div className="Logement-Details">
         <div className="top">
           <div className="Logement-Details__place">
-            <h2>{title}</h2>
-            <p>{location}</p>
-            <ul>
-              {tags.map((tag, index) => (
-                <li key={index + tag}>{tag}</li>
-              ))}
-            </ul>
+            <Place title={title} location={location} tags={tags} />
           </div>
-
           <div className="Logement-Details__host">
-            <div className="Logement-Details__identity">
-              <p>{hostname}</p>
-              <img src={hostpicture} alt="Hote" />
-            </div>
-
-            <div className="Logement-Details__ratingBox">
-              <StarRating count={numbersOfStars} rating={rating} />
-            </div>
+            <Identity hostname={hostname} hostpicture={hostpicture} />
+            <StarRating count={numbersOfStars} rating={rating} />
           </div>
         </div>
         <div className="bottom">
           <div className="Logement-Details__commodities">
-            {accordionContent.map(({ title, content, index }) => (
-              <Accordion
-                key={index + title + content}
-                title={title}
-                content={content}
-              />
+            {accordionContent.map(({ index, title, content }) => (
+              <Accordion key={index} title={title} content={content} />
             ))}
           </div>
         </div>

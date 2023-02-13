@@ -61,10 +61,9 @@
       display: flex;
       justify-content: flex-end;
       @include m.desktop{
-      justify-content: space-between;
-      width:196px;  
-    }
-      
+        justify-content: space-between;
+        width:196px;  
+      }    
     }
     &__host{
       margin-top: 10px;

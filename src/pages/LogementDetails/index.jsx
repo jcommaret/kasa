@@ -28,6 +28,7 @@ export default function LogementDetails() {
   }
   const equipements = equipementsList()
   const numbersOfStars = 5
+  const imageAlt = "Visuels du logement"
 
   const accordionContent = [
     { title: "Description", content: description },
@@ -38,7 +39,7 @@ export default function LogementDetails() {
 
   return (
     <div className="Logement">
-      <SliderHeader slides={slides} />
+      <SliderHeader slides={slides} imageAlt={imageAlt} />
 
       <div className="Logement-Details">
         <div className="top">

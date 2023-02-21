@@ -15,6 +15,7 @@ export default function App() {
           <Route path="kasa" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="logement/:id" element={<LogementDetails />} />
+          <Route path="error" element={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

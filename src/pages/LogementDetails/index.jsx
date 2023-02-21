@@ -13,7 +13,7 @@ export default function LogementDetails() {
   const logementsList = logements
   const [logement, setLogement] = useState()
   const { id } = useParams()
-
+  const numbersOfStars = 5
   const equipementsList = (logement_) => {
     return (
       <>
@@ -30,7 +30,9 @@ export default function LogementDetails() {
 
   useEffect(() => {
     const page = /^[0-9]$/.test(id) ? parseInt(id) : -1
+
     let error = false
+
     if (page >= 0) {
       if (logementsList.length > page) {
         const log = logementsList[page]
@@ -72,8 +74,6 @@ export default function LogementDetails() {
       navigate("/error")
     }
   }, [id])
-
-  const numbersOfStars = 5
 
   return (
     <div className="Logement">

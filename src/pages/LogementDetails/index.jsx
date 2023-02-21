@@ -11,8 +11,9 @@ import { useEffect, useState } from "react"
 export default function LogementDetails() {
   const id = useParams().id
   const navigate = useNavigate()
-  const [logement, setLogement] = useState()
   const logementsList = logements
+  const [logement, setLogement] = useState()
+
   const equipementsList = (logement_) => {
     return (
       <>
@@ -26,11 +27,12 @@ export default function LogementDetails() {
       </>
     )
   }
+
   useEffect(() => {
     const page = parseInt(id)
     let error = false
     if (page) {
-      if (logementsList.length >= page) {
+      if (logementsList.length > page) {
         const log = logementsList[page]
         if (log) {
           const accordeonContent = [

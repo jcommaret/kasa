@@ -1,5 +1,6 @@
 import "./index.scss"
 import logements from "../../data/logements.json"
+import { Link } from "react-router-dom"
 
 export default function LogementsList() {
   const logementsList = logements
@@ -7,7 +8,7 @@ export default function LogementsList() {
     <div className="logementsList">
       {logementsList.map((logement, index) => (
         <div key={index} className="logementsList-item">
-          <a href={`logement/${index}`}>
+          <Link to={`logement/${index}`}>
             <div className="logementsList-item_details">
               <img
                 className="image"
@@ -17,7 +18,7 @@ export default function LogementsList() {
               />
               <h2>{logement.title}</h2>
             </div>
-          </a>
+          </Link>
         </div>
       ))}
     </div>

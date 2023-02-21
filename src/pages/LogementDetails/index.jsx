@@ -9,10 +9,10 @@ import Place from "../../components/Place"
 import { useEffect, useState } from "react"
 
 export default function LogementDetails() {
-  const id = useParams().id
   const navigate = useNavigate()
   const logementsList = logements
   const [logement, setLogement] = useState()
+  const { id } = useParams()
 
   const equipementsList = (logement_) => {
     return (
@@ -29,9 +29,9 @@ export default function LogementDetails() {
   }
 
   useEffect(() => {
-    const page = parseInt(id)
+    const page = /^[0-9]$/.test(id) ? parseInt(id) : -1
     let error = false
-    if (page) {
+    if (page >= 0) {
       if (logementsList.length > page) {
         const log = logementsList[page]
         if (log) {

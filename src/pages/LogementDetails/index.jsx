@@ -48,7 +48,6 @@ export default function LogementDetails() {
             },
           ]
           setLogement({
-            ...logement,
             id: log.id,
             title: log.title,
             cover: log.cover,
@@ -73,7 +72,7 @@ export default function LogementDetails() {
     if (error === true) {
       navigate("/error")
     }
-  }, [id])
+  }, [id, logementsList, navigate])
 
   return (
     <div className="Logement">

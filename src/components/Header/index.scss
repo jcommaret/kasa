@@ -8,13 +8,14 @@
   padding-right:20px;
   padding-top:20px;
   padding-bottom: 0px;
+  justify-content: space-between;
   @include m.desktop{
     padding-left: 100px;
     padding-top: 40px;
     padding-right:100px;
     padding-bottom: 0px;
   }
-  justify-content: space-between;
+  
   &-logo{
     width:145px;
     height:45px;
@@ -24,6 +25,7 @@
       cursor:pointer;
     }
   }
+  
   &-nav{
     height:68px;
     &-list{
@@ -43,14 +45,14 @@
           line-height: 68px;
           text-decoration:none;
           width: 30px;
+          &:hover{
+            text-decoration: underline;
+          }
           @include m.desktop{
             text-transform : initial;
             margin-left: 57px;
             font-size: f.$f24;
             width: initial;
-          }
-          &:hover{
-            text-decoration: underline;
           }
         }
       }

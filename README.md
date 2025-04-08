@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Kasa - Application de location immobilière
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est une application web pour Kasa, une plateforme de location d'appartements entre particuliers en France.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Kasa est une application React permettant de naviguer dans une liste de logements, consulter leurs détails et visualiser les équipements disponibles. Cette application a été développée en suivant les maquettes Figma fournies et en respectant les standards modernes de développement web.
 
-### `npm start`
+## Technologies utilisées
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18
+- React Router v6
+- Dart Sass
+- JavaScript ES6+
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prérequis
 
-### `npm test`
+- Node.js (v14 ou supérieur)
+- NPM ou Yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clonez ce dépôt GitHub :
+```bash
+git clone https://github.com/jcommaret/kasa.git
+cd kasa
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Installez les dépendances :
+```bash
+npm install
+# ou
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Lancez l'application en mode développement :
+```bash
+npm start
+# ou
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+L'application sera disponible à l'adresse [http://localhost:3000/kasa](http://localhost:3000/kasa).
 
-### `npm run eject`
+## Fonctionnalités
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Navigation via React Router
+- Page d'accueil avec liste des logements
+- Page détaillée pour chaque logement
+- Galerie d'images avec carrousel
+- Système d'accordéons pour afficher la description et les équipements
+- Page À propos avec informations sur Kasa
+- Page d'erreur 404 personnalisée
+- Design responsive (mobile, tablette, desktop)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Structure du projet
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+kasa/
+├── public/
+├── src/
+│   ├── assets/       # Images et ressources
+│   ├── components/   # Composants réutilisables
+│   ├── data/         # Données (logements.json)
+│   ├── pages/        # Pages principales
+│   ├── routes/       # Configuration des routes
+│   ├── styles/       # Fichiers SCSS
+│   └── index.js      # Point d'entrée de l'application
+└── package.json
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes techniques
 
-## Learn More
+### Utilisation de Dart Sass
+Le projet utilise exclusivement Dart Sass (l'implémentation officielle et moderne de Sass) et a abandonné l'utilisation de Node Sass (basé sur LibSass) qui est déprécié.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Corrections de dépréciation Sass
+Les fichiers SCSS ont été mis à jour pour corriger les avertissements de dépréciation :
+- Remplacement de `map-get` par `map.get` avec ajout de `@use "sass:map"`
+- Réorganisation des déclarations CSS pour résoudre les avertissements concernant les déclarations apparaissant après des règles imbriquées
+- Ces corrections assurent la compatibilité avec les futures versions de Dart Sass (2.0.0 et 3.0.0)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Déploiement
 
-### Code Splitting
+Pour créer une version de production :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run build
+# ou
+yarn build
+```
 
-### Analyzing the Bundle Size
+Pour déployer sur GitHub Pages :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run deploy
+# ou
+yarn deploy
+```
 
-### Making a Progressive Web App
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est développé dans le cadre d'une formation et est destiné à des fins éducatives.

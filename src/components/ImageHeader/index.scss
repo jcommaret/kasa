@@ -5,10 +5,11 @@
 .imageHeader{
   position: relative;
   height: 111px;
+  margin-top:40px;
   @include m.desktop{
     height:223px;
   }
-  margin-top:40px;
+  
   &-image{
     border-radius: 25px;
     height: 111px;
@@ -19,6 +20,7 @@
       height:223px;
     }
   }
+  
   &-text{
     color: c.$white;
     position: absolute;
@@ -31,7 +33,6 @@
       margin:auto;
       bottom:80px;
       text-align: center;
-      
     }
   }
 }

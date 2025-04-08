@@ -1,9 +1,10 @@
 @use "breakpoints" as b;
 @use "colors" as c;
+@use "sass:map";
 
 
 @mixin desktop {
-    @media screen and (min-width: map-get(b.$breakpoints, desktop)){
+    @media screen and (min-width: map.get(b.$breakpoints, desktop)){
         @content;
     }
 }

@@ -31,7 +31,7 @@
       h2{
         font-size:f.$f18;
         @include m.desktop{
-        font-size:f.$f36;
+          font-size:f.$f36;
         }
       }
       p{
@@ -44,9 +44,6 @@
         flex-wrap: wrap;
         li{
           font-size: f.$f10;
-          @include m.desktop{
-            font-size: f.$f14;
-          }
           background-color: c.$salmon;
           color: c.$white;
           text-align: center;
@@ -54,6 +51,9 @@
           min-width: 115px;
           line-height: 25px;
           border-radius: 10px;
+          @include m.desktop{
+            font-size: f.$f14;
+          }
         }
       }
     }
@@ -67,36 +67,34 @@
     }
     &__host{
       margin-top: 10px;
+      text-align: right;
+      justify-content: right;
       @include m.desktop{
         width:196px;
       }
-      text-align: right;
-      justify-content: right;
       p{
         padding-top:0px;
         padding-left:55px;
         padding-right: 16px;
-        @include m.desktop{
-          padding:16px;
-        }
         width:130px;
         font-size: 12px;
-        @include m.desktop{
-          font-size: f.$f18;
-        }
         color: c.$salmon;
         text-align: right;
         line-height: 16px;
+        @include m.desktop{
+          padding:16px;
+          font-size: f.$f18;
+        }
       }
       img{
         width: 32px;
         height:32px;
+        border-radius: 32px;
+        background-color: c.$grey;
         @include m.desktop{
           width:64px;
           height:64px;
         }
-        border-radius: 32px;
-        background-color: c.$grey;
       }
     }
     &__commodities{
@@ -136,6 +134,5 @@
       }
     }
   }
-
 }
 

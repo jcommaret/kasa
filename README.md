@@ -10,8 +10,10 @@ Kasa est une application React permettant de naviguer dans une liste de logement
 
 - React 18
 - React Router v6
+- Vite
 - Dart Sass
 - JavaScript ES6+
+- Vitest pour les tests
 
 ## Prérequis
 
@@ -35,9 +37,9 @@ yarn install
 
 3. Lancez l'application en mode développement :
 ```bash
-npm start
+npm run dev
 # ou
-yarn start
+yarn dev
 ```
 
 L'application sera disponible à l'adresse [http://localhost:3000/kasa](http://localhost:3000/kasa).
@@ -57,19 +59,36 @@ L'application sera disponible à l'adresse [http://localhost:3000/kasa](http://l
 
 ```
 kasa/
-├── public/
+├── public/             # Ressources statiques
 ├── src/
-│   ├── assets/       # Images et ressources
-│   ├── components/   # Composants réutilisables
-│   ├── data/         # Données (logements.json)
-│   ├── pages/        # Pages principales
-│   ├── routes/       # Configuration des routes
-│   ├── styles/       # Fichiers SCSS
-│   └── index.js      # Point d'entrée de l'application
+│   ├── assets/         # Images et ressources
+│   ├── components/     # Composants réutilisables
+│   ├── data/           # Données (logements.json)
+│   ├── pages/          # Pages principales
+│   ├── routes/         # Configuration des routes
+│   ├── styles/         # Fichiers SCSS
+│   └── index.js        # Point d'entrée de l'application
+├── index.html          # Page HTML principale pour Vite
+├── vite.config.js      # Configuration de Vite
+├── vitest.config.js    # Configuration des tests
 └── package.json
 ```
 
 ## Notes techniques
+
+### Migration vers Vite
+Le projet a été migré de Create React App vers Vite pour bénéficier de :
+- Performance de développement supérieure
+- Temps de build optimisé
+- Hot Module Replacement (HMR) plus rapide
+- Configuration simplifiée
+
+### Gestion des avertissements Sass
+Pour supprimer les avertissements de dépréciation liés à l'API Legacy JS de Sass, nous avons :
+- Configuré Vite pour utiliser des options Sass personnalisées
+- Créé un fichier d'options Sass qui désactive les avertissements
+- Mis à jour la configuration CSS dans vite.config.js
+- Ces modifications permettent d'avoir une console de développement propre sans avertissements
 
 ### Utilisation de Dart Sass
 Le projet utilise exclusivement Dart Sass (l'implémentation officielle et moderne de Sass) et a abandonné l'utilisation de Node Sass (basé sur LibSass) qui est déprécié.
@@ -88,6 +107,14 @@ Pour créer une version de production :
 npm run build
 # ou
 yarn build
+```
+
+Pour prévisualiser la version de production localement :
+
+```bash
+npm run preview
+# ou
+yarn preview
 ```
 
 Pour déployer sur GitHub Pages :

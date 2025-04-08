@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-// Utiliser notre wrapper personnalisé au lieu de sass directement
-import sassWrapper from './sass-wrapper';
+// Utiliser notre wrapper personnalisé ESM au lieu de sass directement
+import quietSass from './sass-wrapper';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,7 +23,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         // Utiliser notre wrapper sans avertissements
-        implementation: sassWrapper,
+        implementation: quietSass,
         additionalData: '/* Processed with Sass Wrapper */',
         quietDeps: true, // Désactiver les avertissements des dépendances
       }

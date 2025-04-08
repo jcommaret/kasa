@@ -1,21 +1,45 @@
-const sass = require('sass');
+import * as sass from 'sass';
 
-// Sauvegarder la méthode originale
-const originalCompileString = sass.compileString;
-
-// Remplacer la méthode originale par une version personnalisée
-sass.compileString = function(source, options = {}) {
-  // Désactiver les avertissements
-  const ourOptions = {
-    ...options,
-    logger: {
-      warn() {}, // Ne rien faire pour les avertissements
-      debug() {} // Ne rien faire pour les messages de débogage
-    }
-  };
+// Créer un wrapper qui supprime les avertissements
+const quietSass = {
+  // Wrapper pour compileString
+  compileString: (source, options = {}) => {
+    const quietOptions = {
+      ...options,
+      logger: {
+        warn() {}, // Supprime les avertissements
+        debug() {} // Supprime les messages de débogage
+      }
+    };
+    
+    return sass.compileString(source, quietOptions);
+  },
   
-  // Appeler la méthode originale avec nos options
-  return originalCompileString(source, ourOptions);
+  // Wrapper pour compile
+  compile: (path, options = {}) => {
+    const quietOptions = {
+      ...options,
+      logger: {
+        warn() {}, // Supprime les avertissements
+        debug() {} // Supprime les messages de débogage
+      }
+    };
+    
+    return sass.compile(path, quietOptions);
+  },
+  
+  // Wrapper pour compileAsync
+  compileAsync: async (path, options = {}) => {
+    const quietOptions = {
+      ...options,
+      logger: {
+        warn() {}, // Supprime les avertissements
+        debug() {} // Supprime les messages de débogage
+      }
+    };
+    
+    return await sass.compileAsync(path, quietOptions);
+  }
 };
 
-module.exports = sass; 
+export default quietSass; 

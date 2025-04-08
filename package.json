@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "homepage": "https://jcommaret.github.io/kasa",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
@@ -51,7 +52,8 @@
     "gh-pages": "^5.0.0",
     "jsdom": "^26.0.0",
     "prettier": "^2.8.3",
-    "vite": "^6.2.5",
+    "sass": "^1.93.1",
+    "vite": "^5.2.2",
     "vitest": "^3.1.1"
   }
 }

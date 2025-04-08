@@ -8,10 +8,8 @@ Kasa est une application React permettant de naviguer dans une liste de logement
 
 ## Technologies utilisées
 
-- React 18
-- React Router v6
 - Vite
-- Dart Sass
+- Sass
 - JavaScript ES6+
 - Vitest pour les tests
 
@@ -31,18 +29,12 @@ cd kasa
 2. Installez les dépendances :
 ```bash
 npm install
-# ou
-yarn install
 ```
 
 3. Lancez l'application en mode développement :
 ```bash
 npm run dev
-# ou
-yarn dev
 ```
-
-L'application sera disponible à l'adresse [http://localhost:3000/kasa](http://localhost:3000/kasa).
 
 ## Fonctionnalités
 
@@ -67,9 +59,10 @@ kasa/
 │   ├── pages/          # Pages principales
 │   ├── routes/         # Configuration des routes
 │   ├── styles/         # Fichiers SCSS
-│   └── index.js        # Point d'entrée de l'application
+│   └── index.jsx       # Point d'entrée de l'application
 ├── index.html          # Page HTML principale pour Vite
 ├── vite.config.js      # Configuration de Vite
+├── sass-wrapper.js     # Wrapper pour supprimer les avertissements Sass
 ├── vitest.config.js    # Configuration des tests
 └── package.json
 ```
@@ -83,10 +76,22 @@ Le projet a été migré de Create React App vers Vite pour bénéficier de :
 - Hot Module Replacement (HMR) plus rapide
 - Configuration simplifiée
 
+### Optimisation pour GitHub Pages
+Le projet utilise HashRouter au lieu de BrowserRouter pour une meilleure compatibilité avec GitHub Pages :
+- URLs préfixées par # (ex: `/#/about` au lieu de `/about`)
+- Pas de problème de rechargement de page 404 sur GitHub Pages
+- Navigation client-side uniquement, sans besoin de configuration serveur
+
+### Utilisation de modules ES (ESM)
+Le projet utilise exclusivement les modules ES (ESM) :
+- Configuration `"type": "module"` dans package.json
+- Meilleure compatibilité avec Vite et les outils modernes
+- Évite les avertissements de dépréciation des modules CommonJS (CJS)
+
 ### Gestion des avertissements Sass
 Pour supprimer les avertissements de dépréciation liés à l'API Legacy JS de Sass, nous avons :
-- Configuré Vite pour utiliser des options Sass personnalisées
-- Créé un fichier d'options Sass qui désactive les avertissements
+- Créé un wrapper ESM pour Sass qui intercepte et supprime tous les avertissements
+- Configuré Vite pour utiliser ce wrapper personnalisé
 - Mis à jour la configuration CSS dans vite.config.js
 - Ces modifications permettent d'avoir une console de développement propre sans avertissements
 

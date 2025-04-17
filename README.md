@@ -1,6 +1,7 @@
 # Kasa - Application de location immobilière
 
 Ce projet est une application web pour Kasa, une plateforme de location d'appartements entre particuliers en France.
+Ce projet est un exercice de développement front-end réalisé dans le cadre de ma formation de développeur web.
 
 ## Description
 
